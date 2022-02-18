@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import { useState} from 'react';
 
 export default function Home() {
@@ -6,11 +7,16 @@ export default function Home() {
   
   return (
     <div className="flex h-screen w-screen">
+        <Head>
+            <title>Rokas Rudys</title>
+        </Head>
       <div className='m-auto scale-150 cursor-help' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
         <div className="font-bold font-serf text-neutral-50 text-2xl"><span className="text-xl opacity-70">{"<"}</span>
         {isShown? "[RokasRudys]" : "[RR]"}
-        <span className="text-xl opacity-70">{"/>"}</span></div>
+        <span className="text-xl opacity-70">{"/>"}</span>
+        </div>
       </div>
+
     </div>
   )
 }
