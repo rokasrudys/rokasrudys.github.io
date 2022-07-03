@@ -1,22 +1,23 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import { useState} from 'react';
+
+import About from './pageComponents/About'
+import Experience from './pageComponents/Experience'
+import Education from './pageComponents/Education'
+import Projects from './pageComponents/Projects'
+import Contact from './pageComponents/Contact'
 
 export default function Home() {
-  const [isShown, setIsShown] = useState(false);
-  
   return (
-    <div className="flex h-screen w-screen">
-        <Head>
-            <title>Rokas Rudys</title>
-        </Head>
-      <div className='m-auto scale-150 cursor-help' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
-        <div className="font-bold font-serf text-neutral-50 text-2xl"><span className="text-xl opacity-70">{"<"}</span>
-        {isShown? "[RokasRudys]" : "[RR]"}
-        <span className="text-xl opacity-70">{"/>"}</span>
-        </div>
-      </div>
-
-    </div>
+      <main className='container mx-auto'>
+        <a class="anchor" name="about"></a>
+        <section className='py-20'><About /></section>
+        <a class="anchor" name="experience"></a>
+        <section className='py-20'><Experience /></section>
+        <a class="anchor" name="projects"></a>
+        <section className='py-20'><Projects /> </section>
+        <a class="anchor" name="education"></a>
+        <section className='py-20'><Education /></section>
+        <a class="anchor" name="contact"></a>
+        <section className='py-20'><Contact /></section>
+      </main>
   )
 }
