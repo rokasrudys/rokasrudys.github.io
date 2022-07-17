@@ -9,9 +9,6 @@ export default function NameLogo() {
         setTimeout(() => setIsShown(false), 2000);   
      }, [])
 
-    async function showLighBulbOnce() {
-      
-    }
     const lightBulb = () => {
         if (light) {
             return <svg xmlns="http://www.w3.org/2000/svg" height="0.8em" fill="currentColor" className='inline-flex align-baseline' viewBox="0 0 16 16">
@@ -23,10 +20,10 @@ export default function NameLogo() {
           </svg>
         }
     }
-    return <div className={`fontCard font-semibold text-black cursor-pointer  text-4xl lg:text-4xl xl:text-5xl`}
+    return <button className={`fontCard font-semibold text-black  cursor-pointer  text-4xl lg:text-4xl xl:text-5xl`}
         onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} onClick={() => setLight(!light)}>
         <span className="text-3xl opacity-70 ">{"<"}</span>
-        <span>[{isShown ? lightBulb() : "RR"}]</span>
+        <span className={`${isShown? 'text-theme-accent-500' : ''}`}>[{isShown ? lightBulb() : "RR"}]</span>
         <span className="text-3xl opacity-70">{"/>"}</span>
-    </div>
+    </button>
 }

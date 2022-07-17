@@ -1,7 +1,7 @@
 export default function CloseButton(props) {
 
-    return <button className={`flex p-1 text-xl drop-shadow shadow-lg font-extrabold border-2
-    rounded-full text-white border-whitebg-transparent hover:text-red-800 hover:border-red-800 hover:bg-white
+    return <button className={`flex p-1 text-xl drop-shadow shadow-lg font-extrabold border-4
+    rounded-full text-black border-black bg-transparent hover:text-red-800 hover:border-red-800 hover:bg-white
     ${props.active? ' text-red-800 border-red-800 bg-white' : ''}`}
 
     onClick={props.onClick}>
