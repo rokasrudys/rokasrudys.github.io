@@ -6,10 +6,10 @@ import HamButton from './HeaderButtons/HamButton';
 
 const navItems = [
     { name: "About", href: "#About" },
-    { name: "Experience", href: "#Experience" },
-    { name: "Projects", href: "#Projects" },
-    { name: "Education", href: "#Education" },
-    { name: "Contact", href: "#Contact" },
+    // { name: "Experience", href: "#Experience" },
+    // { name: "Projects", href: "#Projects" },
+    // { name: "Education", href: "#Education" },
+    // { name: "Contact", href: "#Contact" },
 ]
 
 

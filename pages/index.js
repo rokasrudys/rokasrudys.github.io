@@ -10,14 +10,14 @@ export default function Home() {
       <main className='container mx-auto'>
         <a class="anchor" name="About"></a>
         <section className='py-20'><About /></section>
-        <a class="anchor" name="Experience"></a>
+        {/* <a class="anchor" name="Experience"></a>
         <section className='py-20'><Experience /></section>
         <a class="anchor" name="Projects"></a>
         <section className='py-20'><Projects /> </section>
         <a class="anchor" name="Education"></a>
         <section className='py-20'><Education /></section>
         <a class="anchor" name="Contact"></a>
-        <section className='py-20'><Contact /></section>
+        <section className='py-20'><Contact /></section> */}
       </main>
   )
 }
