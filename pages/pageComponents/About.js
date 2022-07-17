@@ -18,7 +18,7 @@ export default function About() {
                     </h1>
                 </div>
                 <hr className="mx-auto w-1/2 mt-4 border-3 rounded border-theme-accent-200" />
-                <div className="text-xl font-semibold mt-10 text-center text-3xl">
+                <div className="text-xl font-semibold mt-10 text-center">
                     {/* <p className="">
                         I'm a software engineer.
                     </p>
@@ -27,7 +27,7 @@ export default function About() {
                         Currently I am employed at the Driver and Vehicle Licensing Agency (DVLA) as a HEO Software Engineer,
                         working as a member of the payments team, where we handle over £7 billion a year.
                     </p> */}
-                    I'm still currently constructing this site.
+                    Im still currently constructing this site.
                 </div>
             </div>
         </div>

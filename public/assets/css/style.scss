@@ -1,8 +1,6 @@
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
-@import "/public/assets/css/darkTheme.scss";
-
 root {
     ---font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
     ---font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
@@ -10,7 +8,6 @@ root {
 
 $accent: theme("colors.slate.500");
 $main-bg: #fff;
-
 body {
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
@@ -46,7 +43,6 @@ body {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
-
 .fontCard {
     font-family: "Wellfleet", cursive;
 }
@@ -59,20 +55,25 @@ body {
     margin-top: 10rem;
 }
 
-$color: rgb(255, 126, 185);
-$colorDark: darken($color, 15%) transparent;
+$color: rgb(255,
+126,
+185);
+$colorDark: darken($color,
+15%) transparent;
 $color-slate: theme("colors.slate.600");
 $color-slateDark: theme("colors.slate.800") transparent;
-
 .letter-spacing-05em {
     letter-spacing: 0.05em;
 }
 
 .wave {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-duration: 3s; /* Change to speed up or slow down */
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 3s;
+    /* Change to speed up or slow down */
     animation-iteration-count: infinite;
-    transform-origin: 90% 60%; /* Pivot around the bottom-left palm */
+    transform-origin: 90% 60%;
+    /* Pivot around the bottom-left palm */
     display: inline-block;
     z-index: 1;
 }
@@ -83,7 +84,8 @@ $color-slateDark: theme("colors.slate.800") transparent;
     }
     10% {
         transform: rotate(10deg);
-    } /* The following five values can be played with to make the waving more or less extreme */
+    }
+    /* The following five values can be played with to make the waving more or less extreme */
     20% {
         transform: rotate(-4deg);
     }
@@ -98,10 +100,16 @@ $color-slateDark: theme("colors.slate.800") transparent;
     }
     60% {
         transform: rotate(0deg);
-    } /* Reset for the last half to pause */
+    }
+    /* Reset for the last half to pause */
     100% {
         transform: rotate(0deg);
     }
 }
 
-a.anchor{display: block; position: relative; top: -50px; visibility: hidden;}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}

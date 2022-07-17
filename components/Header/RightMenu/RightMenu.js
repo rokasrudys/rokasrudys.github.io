@@ -29,7 +29,7 @@ export default function RightMenu(props) {
             setHoverOutside(false);
         }
     },
-        [props.isMenuOpen]);
+        [props, props.isMenuOpen]);
 
 
     return <div>
