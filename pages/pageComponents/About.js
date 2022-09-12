@@ -56,10 +56,10 @@ export default function About() {
                     <hr className="mx-auto w-1/2 my-4 border-6 rounded border-theme-accent-200" />
                     <div className="mx-auto text-2xl w-10/12">
                         <p className="pt-4">
-                            I'm a <strong>full-stack developer</strong>, living in the UK, who enjoys creating (and designing) <strong>exceptional digital systems</strong> that scale.
+                            I`&apos;`m a <strong>full-stack developer</strong>, living in the UK, who enjoys creating (and designing) <strong>exceptional digital systems</strong> that scale.
                         </p>
                         <p className="mt-5">
-                            Currently, I'm a <strong>Senior Software Engineer</strong> at the UK Driver and Vehicle Licensing Agency <strong>(DVLA)</strong>,
+                            Currently, I`&apos;`m a <strong>Senior Software Engineer</strong> at the UK Driver and Vehicle Licensing Agency <strong>(DVLA)</strong>,
                             where I am developing a <strong>payment system</strong> that handles over <strong>£7 billion</strong> per year.
                         </p>
                     </div>
