@@ -23,7 +23,7 @@ export default function NameLogo() {
     return <button className={`fontCard font-semibold text-black  cursor-pointer  text-4xl lg:text-4xl xl:text-5xl`}
         onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} onClick={() => setLight(!light)}>
         <span className="text-3xl opacity-70 ">{"<"}</span>
-        <span className={`${false? 'text-theme-accent-500' : ''}`}>[{false ? lightBulb() : "RR"}]</span>
+        <span className={`${isShown? 'text-theme-accent-500' : ''}`}>[{isShown ? lightBulb() : "RR"}]</span>
         <span className="text-3xl opacity-70">{"/>"}</span>
     </button>
 }

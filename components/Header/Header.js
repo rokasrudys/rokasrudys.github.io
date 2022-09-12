@@ -8,7 +8,6 @@ const navItems = [
     { name: "About", href: "#About" },
     // { name: "Experience", href: "#Experience" },
     // { name: "Projects", href: "#Projects" },
-    // { name: "Education", href: "#Education" },
     // { name: "Contact", href: "#Contact" },
 ]
 
@@ -78,7 +77,7 @@ export default function Header(props) {
                     <span className='hidden lg:flex items-center xl:text-2xl lg:text-lg'>
                         {navItems.map((item, index) => {
                             return <a className="mx-2 xl:mx-3" href={item.href} key={item.name + item.href}>
-                                <li  style={checkActive(item)} className={`font-semibold
+                                <li style={checkActive(item)} className={`font-semibold
                                  ${props.active?.name === item.name ? 'scale-110 text-black p-2 px-4 rounded-t-3xl' : ' hover:text-theme-accent'}`}>
                                         <span className={`font-black text-sm lg:text-base xl:text-lg
                                         ${props.active?.name === item.name ? 'text-black' : 'text-theme-accent-500 '}
@@ -89,9 +88,9 @@ export default function Header(props) {
 
                         })}
                         <li className='ml-8'>
-                            {/* <button disabled className="flex px-4 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner font-bold border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:border-theme-accent-700 hover:bg-theme-accent">
+                            <button disabled className="flex px-4 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner font-bold border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">
                                 PDF CV
-                            </button> */}
+                            </button>
                         </li>
                     </span>
                     <li className='flex lg:hidden ml-auto'>
