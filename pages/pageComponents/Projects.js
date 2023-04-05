@@ -3,11 +3,11 @@
 export default function Projects() {
     return  <section className="mx-2">
     <div className="row -mb-6 mr-4 z-20 relative flex justify-end">
-         <div className="fontCard text-white bg-black bg-opacity-90 p-3">
-             III. Things I created
+         <div className="fontCard text-white bg-black  p-3">
+             III. Things I{'\''}ve made
          </div>
      </div>
-     <div className="z-10 border-4 p-8 border-black rounded-lg">
+     <div className="z-10 border-4 p-8 border-black rounded-lg bg-white bg-opacity-70">
             <div className="container mt-4 pb-20">
                 <h1 className="text-2xl font-bold text-slate-900">
                     <span className="wave">

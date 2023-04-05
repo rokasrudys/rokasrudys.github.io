@@ -6,7 +6,7 @@ import Contact from './pageComponents/Contact'
 
 export default function Home() {
   return (
-      <main className='container mx-auto'>
+      <main className='container mx-auto min-h-screen'>
         <a className="anchor" name="About"></a>
         <section className='py-28'><About /></section>
         {/* <a className="anchor" name="Experience"></a>

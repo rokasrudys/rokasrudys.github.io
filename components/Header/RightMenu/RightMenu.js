@@ -50,7 +50,7 @@ export default function RightMenu(props) {
                             </li>
                         })}
                         <li className='flex mt-1 items-center px-0 mx-0 justify-center pb-4'>
-                            <button className="min-w-full py-3 bg-theme-accent text-white font-bold text-xl drop-shadow-lg border-4 border-theme-accent-400 hover:text-slate-800 hover:scale-110 hover:border-slate-800 hover:bg-white">
+                            <button className="min-w-full py-3 bg-theme-accent text-white font-bold text-xl drop-shadow-lg border-4 border-theme-accent-400 hover:text-slate-800 hover:scale-110 hover:border-slate-800 hover:bg-white rounded-lg">
                                 PDF CV
                             </button>
                         </li>

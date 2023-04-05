@@ -12,7 +12,7 @@ export default function Header(props) {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'GA_MEASUREMENT_ID');
+          gtag('config', 'G-Y4WKCP05DT');
         `}
       </Script>
     </>

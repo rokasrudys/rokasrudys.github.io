@@ -6,16 +6,16 @@ import HamButton from './HeaderButtons/HamButton';
 
 const navItems = [
     { name: "About", href: "#About" },
-    // { name: "Experience", href: "#Experience" },
-    // { name: "Projects", href: "#Projects" },
-    // { name: "Contact", href: "#Contact" },
+    //  { name: "Experience", href: "#Experience" },
+    //  { name: "Projects", href: "#Projects" },
+    //  { name: "Contact", href: "#Contact" },
 ]
 
 
 export default function Header(props) {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [scrollPercentage, setScrollPercentage] = useState(100);
-    const [scrollBarSize, setScrollBarSize] = useState({width: "100%", height: 10})
+    const [scrollBarSize, setScrollBarSize] = useState({width: "100%", height: 4})
     const scrollBar = useRef(null);
     const navBar = useRef(null);
 
@@ -23,21 +23,12 @@ export default function Header(props) {
         setMenuOpen(!isMenuOpen);
     }
 
-    function getNavHeights() {
-        let items = [];
-
-        navItems.forEach(item => {
-            const element = document.getElementsByName(item.name);
-            const top = element[0]?.getBoundingClientRect()
-            items.push({top: top, ...item})
-        })
-        return items;
-    }
-
     function calculateScrollBar() {
         let wintop = window.scrollY, docheight = document.body.clientHeight, winHeight = window.innerHeight
         setScrollPercentage((wintop / (docheight - winHeight)) * 100);
-        setScrollBarSize({width: navBar?.current.clientWidth, height: navBar?.current.clientHeight + 10 })
+        setScrollBarSize({width: navBar?.current.clientWidth, height: navBar?.current.clientHeight + 8 })
+        console.log(navBar?.current.clientWidth)
+        console.log(navBar?.current.clientHeight + 8)
     }
     
     function checkActive(item) {
@@ -50,8 +41,8 @@ export default function Header(props) {
     }
 
     useEffect(() => {
-        calculateScrollBar()
-    }, [scrollPercentage, scrollBar, navBar])
+        calculateScrollBar();
+      }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', calculateScrollBar, { passive: true });
@@ -62,7 +53,7 @@ export default function Header(props) {
         }
     }, [])
 
-    return <header className='sticky top-0 z-50 mx-4'>
+    return <header className='sticky top-0 z-50 mx-8'>
         <div ref={scrollBar} style={
             {"height" : scrollBarSize?.height,
              "width" : scrollBarSize?.width,
@@ -70,7 +61,7 @@ export default function Header(props) {
             }
         }
          className='absolute rounded-b-full w-full top-1'></div>
-        <nav ref={navBar} className="z-30 relative top-0 rounded-b-full text-black bg-white p-2 lg:p-3 xl:p-4">
+        <nav ref={navBar} className="z-30 relative top-0 rounded-b-full text-black bg-white p-2 lg:p-3 xl:p-4 fontCard">
             <ol className="flex flex-row items-center xl:mx-16 lg:mx-12 md:mx-12 mx-10">
                 <NameLogo />
                 <div className='ml-auto flex'>
@@ -87,8 +78,8 @@ export default function Header(props) {
                             </a>
 
                         })}
-                        <li className='ml-8'>
-                            <button disabled className="flex px-4 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner font-bold border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">
+                        <li className='ml-4'>
+                            <button className="px-5 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">
                                 PDF CV
                             </button>
                         </li>

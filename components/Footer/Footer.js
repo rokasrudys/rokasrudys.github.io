@@ -22,7 +22,7 @@ export default function Footer(props) {
     const forks = <svg aria-hidden="true" viewBox="0 0 16 16" data-view-component="true" height="0.8em" fill="currentColor" className='inline-flex align-baseline' >
         <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
     </svg>
-    return <footer className="bg-black py-6 mt-20 fixed text-sm text-white text-center fontCard bottom-0 left-0 right-0">
+    return <footer className="bg-black py-6 mt-20 text-sm text-white text-center fontCard bottom-0 left-0 right-0">
         <a href={'https://github.com/rokasrudys/rokasrudys.github.io'} >
             <button className='hover:text-theme-accent-200 hover:scale-110'>
                 Designed & Developed by @RokasRudys

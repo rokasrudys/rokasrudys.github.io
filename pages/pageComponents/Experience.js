@@ -4,13 +4,12 @@ export default function Experience() {
     return <section className="mx-2">
         <div className="row -mb-6 mr-4 z-20 relative flex justify-end">
             <div className="fontCard text-white bg-black p-3 ">
-                {"II. Where I've worked"}
+                {"II. Places I've worked"}
             </div>
         </div>
         <div className="border-4 px-2 md:px-4 border-black rounded-lg bg-white bg-opacity-70">
                 <div className="relative wrap overflow-hidden p-10 h-full mt-24">
                     <div className="border-6 absolute rounded border-theme-accent-800 h-full" style={{ left: '50%' }}></div>
-
 
                     <div className="mb-8 flex justify-between ml-auto w-full right-timeline">
                         <div className="w-5/12"></div>
