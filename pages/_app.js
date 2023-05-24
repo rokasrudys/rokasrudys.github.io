@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Header from '../components/Header/Header'
 import LeftSideBar from '../components/LeftSideBar/LeftSideBar'
 import Footer from '../components/Footer/Footer'
-import GTag from '../components/GTag'
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -19,6 +18,5 @@ export default function MyApp({ Component, pageProps }) {
         <LeftSideBar/>
         <Component {...pageProps} />
         <Footer/>
-        <GTag/>
     </div>
 }
