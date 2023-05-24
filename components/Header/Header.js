@@ -76,11 +76,11 @@ export default function Header(props) {
                             </a>
 
                         })}
-                        {/*<li className='ml-4'>*/}
-                        {/*    <button className="px-5 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">*/}
-                        {/*        PDF CV*/}
-                        {/*    </button>*/}
-                        {/*</li>*/}
+                        <li className='ml-4'>
+                            <a href={'Rokas_Rudys_CV.pdf'} download="Rokas_Rudys_CV.pdf" className="px-5 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">
+                                PDF CV
+                            </a>
+                        </li>
                     </span>
                     <li className='flex lg:hidden ml-auto'>
                         <HamButton onClick={toggleSideBarMenu} />
