@@ -27,8 +27,6 @@ export default function Header(props) {
         let wintop = window.scrollY, docheight = document.body.clientHeight, winHeight = window.innerHeight
         setScrollPercentage((wintop / (docheight - winHeight)) * 100);
         setScrollBarSize({width: navBar?.current.clientWidth, height: navBar?.current.clientHeight + 8 })
-        console.log(navBar?.current.clientWidth)
-        console.log(navBar?.current.clientHeight + 8)
     }
     
     function checkActive(item) {
@@ -78,11 +76,11 @@ export default function Header(props) {
                             </a>
 
                         })}
-                        <li className='ml-4'>
-                            <button className="px-5 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">
-                                PDF CV
-                            </button>
-                        </li>
+                        {/*<li className='ml-4'>*/}
+                        {/*    <button className="px-5 py-2 bg-transparent xl:text-2xl lg:text-xl md:text-lg drop-shadow shadow-inner border-3 border-black rounded-2xl hover:text-white hover:scale-105 hover:bg-theme-accent">*/}
+                        {/*        PDF CV*/}
+                        {/*    </button>*/}
+                        {/*</li>*/}
                     </span>
                     <li className='flex lg:hidden ml-auto'>
                         <HamButton onClick={toggleSideBarMenu} />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Footer(props) {
+export default function Footer() {
     const [gitHubInfo, setGitHubInfo] = useState(null);
 
     useEffect(() => {
@@ -13,7 +13,6 @@ export default function Footer(props) {
                     forks: forks_count,
                 });
             })
-            .catch(e => console.error(e));
     }, []);
 
     const stars = <svg aria-hidden="true" viewBox="0 0 16 16" height="0.8em" fill="currentColor" className='inline-flex align-baseline'>

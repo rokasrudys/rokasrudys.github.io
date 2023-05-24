@@ -43,7 +43,7 @@ export default function About() {
     let [currentJoke, setCurrentJoke] = useState({})
     let [lastJoke, setLastJoke] = useState({})
 
-    async function setRandomJoke() {
+    function setRandomJoke() {
         if (jokeList.length === 0) {
             setCurrentJoke({
                 joke: "No more jokes!",
@@ -51,7 +51,7 @@ export default function About() {
             })
             setRevealJoke(true)
         } else {
-            await setJokeList(jokeList.filter(item => item.joke !== lastJoke.joke))
+            setJokeList(jokeList.filter(item => item.joke !== lastJoke.joke))
             setCurrentJoke({ ...jokeList[Math.floor(Math.random() * jokeList.length)] })
         }
     }
@@ -83,8 +83,17 @@ export default function About() {
         }
     }
 
+    function showPunchline(e) {
+        e.stopPropagation();
+        if (isRevealed) {
+            newJoke();
+        } else {
+            setRevealJoke(!isRevealed);
+        }
+    }
+
     return <div className="flex lg:flex-row flex-col">
-        <div className="mx-auto px-4">
+        <div className="mx-auto px-14">
             <div className="row -mb-6 mr-4 flex justify-end">
                 <div className="fontCard text-white bg-black p-3 ">
                     I. About me
@@ -106,7 +115,7 @@ export default function About() {
                             <h1 className="font-semibold text-white p-4 rounded-3xl w-10/12 mx-auto">
                                 <span className="block text-xl">{getJoke()}</span>
                                 <span className={`block mt-4 rounded-xl text-3xl p-2 bg-opacity-85 transition duration-800 hover:bg-opacity-50 bg-white ${isRevealed ? 'bg-transparent text-white' : 'text-black'} font-bold mb-1`}
-                                    onClick={(e) => { setRevealJoke(!isRevealed); e.stopPropagation() }}>{getPunchLine()}</span>
+                                    onClick={showPunchline}>{getPunchLine()}</span>
                             </h1>
                         </div>
                     </div>
@@ -125,7 +134,7 @@ export default function About() {
         </div>
         <div className="lg:-ml-32 lg:p-0 mx-auto mt-10 sm:mt-28 lg:mt-28 lg:rotate-6 transition duration-600 hover:scale-110 hover:brightness-105">
             <div className="border-black border-t-4 border-8 border-b-10 rounded-full bg-black drop-shadow-xl">
-                <Image priority={false} className="rounded-full z-10" width="400" height="400" alt="Portrait image of Rokas Rudys" src="/assets/images/me/portrait.jpg" />
+                <Image priority={true} className="rounded-full z-10" width="400" height="400" alt="Portrait image of Rokas Rudys" src="/assets/images/me/portrait.jpg" />
             </div>
             <div className="fontCard text-xl relative rounded-lg  text-white bg-black pt-4 pb-3 drop-shadow-lg mx-auto w-7/12 -mt-10 z-20 text-center">
                 <span className="wave">
